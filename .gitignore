@@ -3,7 +3,7 @@
 /docroot/sites/*/private
 /docroot/files/*
 /docroot/cache
-
+/docroot/sites/default/settings.php
 # Ignore css files these will be built on deploy
 /docroot/sites/all/themes/*/css
 

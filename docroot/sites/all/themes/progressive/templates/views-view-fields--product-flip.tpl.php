@@ -69,7 +69,7 @@ $path = $fields['path']->content ? $fields['path']->content : url('node/' . $fie
         </svg>
       </a>
     </span>
-    <?php print flag_create_link('wishlist', $fields['nid']->content); ?>
-    <?php print flag_create_link('compare', $fields['nid']->content); ?>
+<!--    --><?php //print flag_create_link('wishlist', $fields['nid']->content); ?>
+<!--    --><?php //print flag_create_link('compare', $fields['nid']->content); ?>
   </div><!-- .actions -->
 </div><!-- .product-hover -->

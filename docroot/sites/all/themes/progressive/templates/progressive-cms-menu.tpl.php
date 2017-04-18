@@ -11,7 +11,7 @@ $one_page = isset($layout['settings']['one_page']) && $layout['settings']['one_p
         ?>
           <div class="btn-group language btn-select">
             <a class="btn dropdown-toggle btn-default" role="button" data-toggle="dropdown" href="#">
-              <span class="hidden-xs"><?php print t('Language'); ?></span><span class="visible-xs"><?php print t('Lang');?></span><!-- 
+              <span class="hidden-xs"><?php print t('Language'); ?></span><span class="visible-xs"><?php print t('Lang');?></span><!--
               -->: <?php print $language->name; ?>
               <span class="caret"></span>
             </a>
@@ -104,44 +104,6 @@ $one_page = isset($layout['settings']['one_page']) && $layout['settings']['one_p
               </svg>
               </a>
             </div>
-            <div class="phone-header hidden-600">
-              <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-                <path d="M11.001,0H5C3.896,0,3,0.896,3,2c0,0.273,0,11.727,0,12c0,1.104,0.896,2,2,2h6c1.104,0,2-0.896,2-2
-                c0-0.273,0-11.727,0-12C13.001,0.896,12.105,0,11.001,0z M8,15c-0.552,0-1-0.447-1-1s0.448-1,1-1s1,0.447,1,1S8.553,15,8,15z
-                M11.001,12H5V2h6V12z"></path>
-                <!--<img src="<?php print base_path() . path_to_theme(); ?>/img/png-icons/phone-icon.png" alt="" width="16" height="16" style="vertical-align: top;">-->
-              </svg>
-              </a>
-            </div>
-            <?php
-              if(module_exists('flag')) {
-                $flags = flag_get_user_flags('node');?>
-                <?php if(theme_get_setting('comparelist')): ?>
-                  <div class="compare-header flag-status-compare hidden-600" <?php print !isset($flags['compare']) ? 'style="display:none"' : ''; ?>>
-                    <a href="<?php print url('product-compare'); ?>">
-                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-                        <path fill="#1e1e1e" d="M16,3.063L13,0v2H1C0.447,2,0,2.447,0,3s0.447,1,1,1h12v2L16,3.063z"></path>
-                        <path fill="#1e1e1e" d="M16,13.063L13,10v2H1c-0.553,0-1,0.447-1,1s0.447,1,1,1h12v2L16,13.063z"></path>
-                        <path fill="#1e1e1e" d="M15,7H3V5L0,7.938L3,11V9h12c0.553,0,1-0.447,1-1S15.553,7,15,7z"></path>
-                      </svg>
-                      <span class = "flag-counter flag-count-compare"><?php print !isset($flags['compare']) ? 0 : count($flags['compare']); ?></span>
-                    </a>
-                  </div>
-                <?php endif; ?>
-                <?php if(theme_get_setting('wishlist')): ?>
-                <div class="wishlist-header flag-status-wishlist hidden-600" <?php print !isset($flags['wishlist']) ? 'style="display:none"' : ''; ?>>
-                  <a href="<?php print url('shop/wishlist'); ?>">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-                      <path fill="#1e1e1e" d="M11.335,0C10.026,0,8.848,0.541,8,1.407C7.153,0.541,5.975,0,4.667,0C2.088,0,0,2.09,0,4.667C0,12,8,16,8,16
-                      s8-4,8-11.333C16.001,2.09,13.913,0,11.335,0z M8,13.684C6.134,12.49,2,9.321,2,4.667C2,3.196,3.197,2,4.667,2C6,2,8,4,8,4
-                      s2-2,3.334-2c1.47,0,2.666,1.196,2.666,2.667C14.001,9.321,9.867,12.49,8,13.684z"></path>
-                    </svg>
-                    <span class = "flag-counter flag-count-wishlist"><?php print !isset($flags['wishlist']) ? 0 :count($flags['wishlist']); ?></span>
-                  </a>
-                </div>
-                <?php endif; ?>
-            <?php } ?>
             <?php if(module_exists('uc_cart')): ?>
             <div class="btn-group cart-header">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
